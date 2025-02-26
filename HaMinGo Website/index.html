@@ -1,1 +1,182 @@
-<meta http-equiv="refresh" content="0; url=main.html">
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaMinGo - Ví Điện Tử NFC</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="stylesheet" href="styleweb.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-left">
+            <div class="logo">
+                <a href="#">
+                    <img src="Logo2.png" alt="HaMinGo Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#">Dịch vụ</a>
+                        <ul class="submenu">
+                            <li><a href="#">Chuyển - Nhận tiền</a></li>
+                            <li><a href="#">Nạp tiền điện thoại</a></li>
+                            <li><a href="#">Thanh toán hóa đơn</a></li>
+                            <li><a href="#">Vé xem phim</a></li>
+                            <li><a href="#">Vé máy bay</a></li>
+                            <li><a href="#">Tài chính / Bảo hiểm</a></li>
+                            <li><a href="#">Quản lý chi tiêu</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Về HaMinGo</a></li>
+                    <li class="menu-item"><a href="#">Tin tức</a></li>
+                    <li class="menu-item"><a href="#">Trợ giúp</a></li>
+                    <li class="menu-item"><a href="#">Đối tác</a></li>
+                    <li class="menu-item"><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button><img src="searchicon.png" alt="Tìm kiếm"></button>
+        </div>
+               
+        <div class="animated-logo">HaMinGo</div>
+    </header>
+    <script src="effect.js"></script>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <!-- Slide 1: Ảnh -->
+                <div class="slide">
+                    <img src="148.jpg" alt="Quảng cáo 1">
+                </div>
+                <div class="slide">
+                    <video autoplay loop muted playsinline>
+                        <source src="Banner2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slide">
+                    <video autoplay loop muted playsinline>
+                        <source src="Banner3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="services-container">
+        <h2 class="services-title">Tiện ích và dịch vụ</h2>
+        <p class="services-subtitle">
+            Ví điện tử HaMinGo với công nghệ NFC lần đầu tiên trên thế giới tích hợp thanh toán,
+            giúp bạn có thể tiếp cận nhiều dịch vụ tài chính đa dạng với chi phí hợp lý, để bạn làm được nhiều hơn với tiền.
+        </p>
+        <div class="services-slider">
+            <button class="scroll-btn left" onclick="scrollServices(-1)">❮</button>
+            <div class="services-list">
+                <div class="service-item active" onclick="showNews(0)">
+                    <i class="icon">🔲</i>
+                    <span>HaMinGo đề xuất</span>
+                </div>
+                <div class="service-item" onclick="showNews(1)">
+                    <i class="icon">💰</i>
+                    <span>Tài chính - Bảo hiểm</span>
+                </div>
+                <div class="service-item" onclick="showNews(2)">
+                    <i class="icon">🎬</i>
+                    <span>Mua vé xem phim</span>
+                </div>
+                <div class="service-item" onclick="showNews(3)">
+                    <i class="icon">💖</i>
+                    <span>Ví Thời Gian</span>
+                </div>
+                <div class="service-item" onclick="showNews(4)">
+                    <i class="icon">🎮</i>
+                    <span>Trò chơi</span>
+                </div>
+                <div class="service-item" onclick="showNews(5)">
+                    <i class="icon">📱</i>
+                    <span>Điện thoại - Data 4G/5G</span>
+                </div>
+                <div class="service-item" onclick="showNews(6)">
+                    <i class="icon">🧾</i>
+                    <span>Thanh toán hoá đơn</span>
+                </div>
+                <div class="service-item" onclick="showNews(7)">
+                    <i class="icon">✈</i>
+                    <span>Du lịch - Đi lại</span>
+                </div>
+                <div class="service-item" onclick="showNews(8)">
+                    <i class="icon">💳</i>
+                    <span>Chuyển - Nhận tiền</span>
+                </div>
+                <div class="service-item" onclick="showNews(9)">
+                    <i class="icon">🛍</i>
+                    <span>Thương mại điện tử</span>
+                </div>
+                <div class="service-item" onclick="showNews(10)">
+                    <i class="icon">🎮</i>
+                    <span>Game - Ứng dụng</span>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollServices(1)">❯</button>
+        </div>
+    </div>
+    
+    <!-- Bài báo mini -->
+    <div class="news-container" id="news-box">
+        <div class="news-content-wrapper">
+            <h2 class="news-title" id="news-title">Tiêu đề bài viết</h2>
+            <p class="news-content" id="news-content">Nội dung bài báo sẽ hiển thị ở đây.</p>
+            <img class="news-image" id="news-image" src="Logo.png" alt="Ảnh bài báo">
+        </div>
+        <br>
+        <button class="close-btn" onclick="closeNews()">Đóng</button>
+    </div>
+    <script src="Bao.js"></script>
+    
+    
+    
+    
+
+    
+    <div class="hero">
+        <h2>Thanh Toán Nhanh Chóng & Tiện Lợi</h2>
+        <p>Chạm để thanh toán, chuyển tiền tức thì, bảo mật cao.</p>
+    </div>
+
+    <!-- Các tính năng chính -->
+    <div class="features">
+        <div class="feature-box">
+            <img src="https://source.unsplash.com/80x80/?payment" alt="Thanh toán NFC">
+            <h3>Thanh Toán NFC</h3>
+            <p>Chạm để thanh toán an toàn và nhanh chóng.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://source.unsplash.com/80x80/?money" alt="Chuyển Tiền">
+            <h3>Chuyển Tiền</h3>
+            <p>Chuyển khoản dễ dàng chỉ với một cú chạm.</p>
+        </div>
+        <div class="feature-box">
+            <img src="https://source.unsplash.com/80x80/?bank" alt="Liên Kết Ngân Hàng">
+            <h3>Liên Kết Ngân Hàng</h3>
+            <p>Kết nối tài khoản ngân hàng của bạn để thanh toán nhanh.</p>
+        </div>
+    </div>
+
+    <!-- Lời kêu gọi tải ứng dụng -->
+    <div class="cta">
+        <h2>Tải Ứng Dụng Ngay</h2>
+        <p>Trải nghiệm công nghệ tài chính thông minh.</p>
+        <button>Tải Ngay</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 HaMinGo. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+</body>
+</html>
